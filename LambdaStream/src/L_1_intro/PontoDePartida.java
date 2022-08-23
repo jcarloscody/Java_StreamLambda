@@ -2,6 +2,7 @@ package L_1_intro;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class PontoDePartida {
     public static void main(String ... args) {
@@ -16,5 +17,28 @@ public class PontoDePartida {
             System.out.println(u.getNome());
 
         }
+
+        Mostrador mostrador = new Mostrador();
+        usuarios.forEach(mostrador);
+
+
+        //classes anônimas
+        Consumer<Usuario> mostradorr = new Consumer<Usuario>() {
+            @Override
+            public void accept(Usuario usuario) {
+                System.out.println(usuario.getNome());
+            }
+        };
+
+        usuarios.forEach(mostradorr);
+
+
+        usuarios.forEach(new Consumer<Usuario>() {
+            public void accept(Usuario u) {
+                System.out.println(u.getNome());
+            }
+        });
     }
+
+
 }
