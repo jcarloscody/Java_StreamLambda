@@ -15,3 +15,22 @@ Validador<String> validadorCEP = new Validador<String>() {
     }
 };
 ```
+
+- A anotação **@FunctionalInterface**
+
+- **Interfaces funcionais são o coração** do recurso de Lambda. O Lambda por si só não existe, e sim expressões lambda, quando atribuídas/inferidas a uma interface funcional
+
+```
+Runnable o = () -> {
+    System.out.println("O que sou eu? Que lambda?");
+};
+System.out.println(o);
+System.out.println(o.getClass());   
+```
+> Capitulo3$$Lambda$1@1fc625e
+
+> class Capitulo3$$Lambda$1
+
+- Repare que não foi gerado um .class no seu diretório, essa classe é criada dinamicamente!
+
+- OBS: Captura de variáveis locais
