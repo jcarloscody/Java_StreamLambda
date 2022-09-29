@@ -34,3 +34,8 @@ System.out.println(o.getClass());
 - Repare que não foi gerado um .class no seu diretório, essa classe é criada dinamicamente!
 
 - OBS: Captura de variáveis locais
+
+
+# Default Methods
+- **forEach** na interface Iterable
+- 
