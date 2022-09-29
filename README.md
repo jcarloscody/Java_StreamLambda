@@ -35,6 +35,20 @@ System.out.println(o.getClass());
 
 - OBS: Captura de variáveis locais
 
+## A interface Consumer não tem só um método
+> uma interface funcional é aquela que possui apenas um método abstrato! Ela pode ter sim mais métodos, desde que sejam métodos default.
+
+```
+@FunctionalInterface
+public interface Consumer<T> {
+    void accept(T t);
+    default Consumer<T> andThen(Consumer<? super T> after) {
+        Objects.requireNonNull(after);
+        return (T t) -> { accept(t); after.accept(t); };
+    }
+}
+```
+
 
 # Default Methods
 - **forEach** na interface Iterable
